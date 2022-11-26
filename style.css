@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,100;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,100;1,300&family=Roboto+Mono:ital,wght@0,200;0,300;1,100;1,200;1,300&display=swap");
+:root {
+  --font-Lato: "Lato", sans-serif;
+  --font-Mono: "Roboto Mono", monospace;
+}
+
+body {
+  background: linear-gradient(
+    rgba(241, 246, 253, 0) 1.63%,
+    #f1f6fd 20.5%,
+    #f1f6fd 58.57%,
+    #ffffff 100%
+  );
+}
+
+.thelogo {
+  margin: 30px;
+  margin-bottom: 10px;
+}
+
+.popUpDel {
+  width: 450px;
+  height: 100px;
+  position: fixed;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  background-image: linear-gradient(#a1d0fb,#0067C8 );
+  filter: drop-shadow(8px 8px 8px #000 );
+}
+
+.show {
+  display: none;
+}
+
+.popUpDel .modalDel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popUpDel .modalDel .con p {
+  font-family: Inter;
+  font-size: 20px;
+}
+
+.popUpDel .modalDel .btnsDel {
+  display: flex;
+  gap: 30px;
+}
+
+.popUpDel .modalDel .btnsDel button {
+  align-self: center;
+  background: #f7a81b;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: "Inter";
+  width: 130px;
+  height: 30px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.popUp {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+  background-color: #ffffff;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+  width: 455px;
+  height: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  font-family: var(--font-Mono);
+}
+
+.popImg{
+    width : 150px ;
+    height :150px ;
+}
+.popUp .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.popUp .nome{
+    font-size: 18px;
+}
+
+.popUp .left .av{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.popUp .left .av .rev{
+    font-size: 11px;
+    margin-left: 13px;
+}
+
+.color{
+    display: flex;
+    align-items: center;
+}
+
+input[type=color]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 67px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=color]::-webkit-color-swatch{
+    border-radius: 50%;
+    border: none;
+}
+
+input[type=color]::-moz-color-swatch{
+    border-radius: 50%;
+    border: 7px solid inherit;
+}
+
+.quan{
+    display: flex;
+    justify-content: space-between;
+    gap:30px;
+    
+}
+
+.quann{
+    display: flex;
+}
+
+.quan input {
+width: 50px;
+outline: none;
+}
+
+.btns{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    
+}
+
+.btns .add{
+    background-color: #088178;
+    color: #ffffff;
+    border: inherit;
+    height: 43px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: var(--font-Mono);
+}
+
+.btns .buy{
+    background-color: #ffffff;
+    border: inherit;
+    height: 40px;
+    box-shadow: 30px 20px 70px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-family: var(--font-Mono);
+
+}
+
+.add:hover,
+.buy:hover{
+    transition: 0.6 ease;
+    transform: scaleY(1.1);
+}
+.popUp a{
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.popUp a .bi-x{
+    color: #000;
+    font-size: 25px;
+    
+}
+
+#sessao-venda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sessao-venda h1 {
+  font-family: var(--font-Mono);
+  letter-spacing: 3px;
+  position: relative;
+}
+
+#sessao-venda h1::after {
+  content: "";
+  height: 3px;
+  width: 20%;
+  background-color: #088178;
+  position: absolute;
+  left: calc(100% - 18%);
+  bottom: -8px;
+}
+
+#itens_section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 30px;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: auto;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  background-color: #f1f6fd;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  border-radius: 25px;
+  margin: 15px 0;
+  transition: 0.2s ease;
+  text-align: start;
+}
+
+.item:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+}
+
+.item .ribbon {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.item .ribbon::before {
+  content: "Sale";
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background-color: #088178;
+  transform: rotate(-45deg) translateY(-30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: var(--font-Mono);
+  font-weight: bold;
+}
+
+.imgg {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.item .con {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+
+.item .con .title {
+  padding-top: 7px;
+  font-size: 14px;
+  font-family: var(--font-Mono);
+}
+
+.stars {
+  display: flex;
+  gap: 3px;
+  font-size: 12px;
+  color: rgb(243, 181, 25);
+}
+
+
+
+.item .con .sub {
+  float: inline-end;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.item .con .sub .pri {
+  font-family: var(--font-Lato);
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+}
+
+.item .con .sub .priP {
+  font-size: 13px;
+  text-decoration: line-through;
+  color: gray;
+}
+
+.item .con .sub a i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+}
+
+.item .con .sub a i:hover {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.show{
+    display: none;
+    visibility: hidden;
+}
+
+@media (max-width:478px) {
+    .popUp{
+        flex-direction: column-reverse;
+        width: 300px;
+        height: 500px;
+    }
+
+    .popUp a {
+        color: #000;
+        font-size: 25px;
+        align-self: flex-end;
+        margin-right: 15px;
+        margin-top: 10px;
+    }
+}
